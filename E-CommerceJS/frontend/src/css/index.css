@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  margin: 0px;
+}
+html {
+  font-size: 1rem;
+}
+:root {
+  --mainColor: rgb(0, 103, 134);
+  --secodColor: rgb(218, 216, 216);
+  --thirdColor: darkgrey;
+  --whiteColor: white;
+  --subColor: rgb(248, 232, 10);
+  --subColordark: rgb(160, 149, 4);
+  --black: black;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+a:hover {
+  color: var(--subColordark);
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 2rem;
+  height: 100%;
+}
+header {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 150px;
+  padding-right: 50px;
+}
+header a {
+  color: var(--whiteColor);
+
+  transition: 0.5s ease-in-out;
+}
+header a:hover {
+  color: var(--subColor);
+}
+header div:first-child a {
+  font-size: 3rem;
+}
+header div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  background-color: var(--mainColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+/*Products*/
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: center;
+}
+.products li {
+  flex: 0 1 30rem;
+  margin: 1rem;
+  margin-bottom: 0;
+  height: 14rem;
+  border-top: 0.2rem solid var(--mainColor);
+
+  max-width: 15rem;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.product img {
+  max-height: 15rem;
+  max-width: 15rem;
+  margin-top: 0.1rem;
+}
+.product-name {
+  line-height: 1.8rem;
+}
+.product-brand {
+  color: var(--thirdColor);
+}
+.product-price {
+  font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 650px) {
+  header {
+    padding-left: 100px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  header div:first-child a {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header {
+    padding-left: 50px;
+  }
+  header div:first-child a {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 350px) {
+  header {
+    padding-left: 20px;
+  }
+}
