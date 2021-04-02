@@ -11,3 +11,20 @@ Creat Folder Structure
 with name start and value "live-server src --verbose",
 "start":"live-server src --verbose",
 8.run npm start
+9.creat html file and add the structure of the website page
+10.add some styles with css
+4/2/2021
+1.create data.js some info object of the the products
+2.export an array of 6 products
+3.create screen/Homescreen.js
+4.added extension Html&less grammar injection to make the inside backteck like html 'HTML&LESS grammar injections'
+https://marketplace.visualstudio.com/items?itemName=gsheru.vscode-inject-html-less-grammar
+5.export home screen as an object with render()method
+6.import data.js
+7.retur data mapped to lis inside an ul
+8.creat app.js
+9.link it to index.html as module
+10.set main id to main-container
+11.create router function inside app.js
+12.set main_container innerHtml to Homescreen.render()
+13.set load event of window to router() function
