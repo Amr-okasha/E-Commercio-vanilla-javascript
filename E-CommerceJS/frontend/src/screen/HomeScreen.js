@@ -1,7 +1,19 @@
-import data from "../javascript/data.js"
+// import data from "../javascript/data.js" the backend instead of this
 const HomeScreen = {
-    render: () => {
-        const { products } = data
+    render: async () => {
+        //  const { products } = data this has commented becouse the backend is created
+        //instead of the last statement we will make fetch api
+
+        const response = await fetch("http://localhost:5000/api/products", {
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        if (!response || !response.ok) {
+            return `<div>Error in getting data</div>`
+        }
+        const products = await response.json()
+        console.log(products)
         return `
         <ul class="products">
         ${products.map(product => `

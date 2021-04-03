@@ -39,3 +39,4 @@ https://marketplace.visualstudio.com/items?itemName=gsheru.vscode-inject-html-le
 8.Build ParseURL and compare with routes
 9.if routes exists render it ,else render 404
 10.creat screen/error.js and render error message
+11.we will open the link then add /api/products to the link like we wrote it in the backend get

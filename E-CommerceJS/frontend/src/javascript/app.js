@@ -8,7 +8,7 @@ const routes = {
     "/product/:id": ProductScreen
 }
 
-const router = () => {
+const router = async () => {
     const request = parsrRequestURL()
     console.log(request.resource)
     console.log(request.id)
@@ -18,7 +18,7 @@ const router = () => {
     const screen = routes[parseURL] ? routes[parseURL] : Error404Screen;
     const main = document.getElementById("main-container")
     // main.innerHTML = HomeScreen.render() insted of this we will put
-    main.innerHTML = screen.render()
+    main.innerHTML = await screen.render()
 }
 router()
 window.addEventListener("load", router)
