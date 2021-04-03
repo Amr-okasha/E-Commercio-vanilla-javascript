@@ -28,3 +28,14 @@ https://marketplace.visualstudio.com/items?itemName=gsheru.vscode-inject-html-le
 11.create router function inside app.js
 12.set main_container innerHtml to Homescreen.render()
 13.set load event of window to router() function
+3/4/2021
+1.creat route screen object for home screen
+2.creat utils.js
+3.export parseRequestURL()
+4.set url as hash adderess split by slash
+5.return resource id and verb of url
+6.update router()
+7.set request as parseRequestURL()
+8.Build ParseURL and compare with routes
+9.if routes exists render it ,else render 404
+10.creat screen/error.js and render error message
