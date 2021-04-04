@@ -19,3 +19,35 @@ create http request from the front end to get the data from backend
 4.make router() async and call await Screen.render in app.js
 5.use cors on backend
 6.note you should open both backage.json to be able to fitch
+b-
+add webpack ==>>
+compine files of js together to make it faster make main.js file
+1.cd frontend
+2.(npm install -D webpack webpack-cli webpack-dev-server)
+these backages ==>> are called development mood - development dependencies
+
+(npm install -D webpack webpack-cli) the two first backages
+===> make it possiple to combine all js files and build final main.js
+the last backage
+(webpack-dev-server)
+==>is just for development phase it check files with change it auto reload web server and apply changes
+in using the last package there is no need to <<< live server >>> so uninstall it as below
+3.(npm uninstall live-server)
+4.update backage.json <<inside frontend>>
+folder with the next json object instead of live server that already exists
+<<"start":"webPack-dev-server --mode development --watch-content-base --open">>
+--watch-content-base ====>>>>>
+to check source folder and render if there change in folder and rebuild javascript file
+--open ====>>>>
+it automatically open web browser and launch web application there
+5.move <<index.html ,index.css and images>>from (( src to frontend )) folder
+6.rename (((app.js))) to <<<index.js>>>
+7.update index.html
+8.add<script src="main.js"></script>before body</body> and remove the old one
+there is no main.js file (webpack-dev-server)created it on the fly it doest exist to see it is on the fly
+9.npm start
+
+notes:
+webpack is a backage only for frontend
+node.js-backage.json shouldbe in them location to prevent mistakes
+compatibility items an important to work correctly with each other

@@ -1,5 +1,5 @@
 E-COMMERCIO
-
+1/4/2021
 Creat Folder Structure
 1.create root folder as E-COMMERCIOJS.
 2.add frontend and backend folder
@@ -13,7 +13,7 @@ with name start and value "live-server src --verbose",
 8.run npm start
 9.creat html file and add the structure of the website page
 10.add some styles with css
-4/2/2021
+2/4/2021
 1.create data.js some info object of the the products
 2.export an array of 6 products
 3.create screen/Homescreen.js
