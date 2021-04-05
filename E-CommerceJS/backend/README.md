@@ -62,6 +62,7 @@ compatibility items an important to work correctly with each other
 11.change fetch to axios in HomeScreen
 
 5-4-2021
+
 A-
 instal babel transpiler for ES6 syntax in the backend
 remove all terminal and in the root folder
@@ -96,3 +97,86 @@ backend/server.js ==> the file that babel will work with
 7.convert data.js syntax ES5 to ES6
 
 b-
+code linting feature in backend
+help developer to fin error faster and fix them easier
+1.use eslint as acode linter in server .js
+2.root folder install eslint as dev dependencies
+(npm install -D eslint)
+3.vscode extentions get (eslint) install it
+4.configuration ===>
+create ---(.eslint.rc.js)--- in the root folder
+5.inside it define setting of eslint javascript modules
+6.its list of coding rules that make code consistent and integrated
+
+(module.exports = {
+env: {
+browser: true,
+node: true,
+es2020
+},
+extends: ['airbnb-base'],
+parserOptions: {
+sourceType: "module",
+ecmaversion: 11
+},
+rules:{
+'no-console':0,
+}
+})
+
+6.1.enviroment of eslint configuration
+browser for the frontend
+node for backend
+env: {
+browser: true,
+node: true,
+es2020
+}
+6.2.the second option extends ==>extensions
+extends:['airbnb-base']
+6.3.this setting because of using import export ES6 module styleing in the backend
+parserOptions: {
+sourceType: "module"
+}
+6.4. ecmaversion: 11
+javascript version
+
+6.5.rules:{
+'no-console':0,
+}
+to didnt show console log error
+7.install ===>
+(npm install eslint-config-airbnb-base eslint-plugin-import)
+
+install eslint-config-airbnb-base ===>apply airbnb plugin coding style
+eslint-plugin-import ====>make it possiple import export validation in js code
+
+8.press Eslint down the bar below and run make sure its running
+note =>to know the proplem with somthing click on it and press f8
+
+9.press (ctr-shift-p)
+type ===> eslint
+select Disable Eslint
+repeat again
+select enable Esint
+
+10.change file eslint name to (.eslintrc.js)
+11.press on the error and press (ctr-s)to fix
+12.if the error dosent solved
+12.a.enable action and saveto fix all js lint
+(ctr-shift-p)==>type (json) =>select (preferences open settening json)
+12.b.add
+("editor.formatOnSave": true,),
+("editor.codeActionsOnSave": {"source.fixAll.eslint":true}),
+
+13.install vs code extensions
+-(javaScript(ES6)code snippest)
+-(es7 react redux graphql react native snippests)
+-(prettier-code formatter) with eslint make proplems because both do the same
+install
+(eslint config prettier in the terminal)
+(npm install -D eslint-config-prettier) in the root file
+\*enable eslint config
+-open eslintrc.js
+add prettier like that extends: ['airbnb-base',"prettier"],
+-(Html &less grammer injection)

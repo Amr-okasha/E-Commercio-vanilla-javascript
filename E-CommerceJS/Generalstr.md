@@ -20,7 +20,7 @@ if it dosent it get the error404page
 15.create the backend folder
 16.create node-modules package.json and add data-info for dependencies in backend file in the root file server.js
 17.create the backend once it runs
-18.move data.js from frontend to the backend and connet them
+18.move data.js from frontend to the backend and connet them cancel ES6 convert to ES5 (import default) converted to( module.export =)
 19.cancel the function that get data fom data.js and make http request and
 fetch data from backend
 20.add webpack
@@ -29,3 +29,6 @@ fetch data from backend
 23.install npm webpack and put its info in package.json in frontend
 24.install axios packages and instead of fetch use axios
 25.install babel backages
+26.convert data from ES5 to ES6 in the front End
+27.add some data to package.json in the root folder to turn ES6 and run data without npm start
+28.code linting features
