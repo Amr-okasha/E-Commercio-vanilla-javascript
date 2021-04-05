@@ -1,8 +1,9 @@
 //make comment to export default to use this page in the backend and run module.export
-// export default 
+// export default   (this deleted after  the file moved to the backend) because not didnt deal with ES6
 
-module.exports =
-{
+// (module.exports  =) this deleted after babel install becouse the babel deal with node and ES6
+
+export default {
     products: [
 
         {

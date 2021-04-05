@@ -18,14 +18,20 @@ create http request from the front end to get the data from backend
 3.fetch products from "/api/products"in render()
 4.make router() async and call await Screen.render in app.js
 5.use cors on backend
+in the root folder install cors
+(npm install cors)
+in server.js ===>
+(const cors = require("cors"))
+(app.use(cors())) ==>put it after const app =express
 6.note you should open both backage.json to be able to fitch
 b-
 add webpack ==>>
+to handle all js file and compine them together to improve the speed and also make it possible npm packages to apply them to the project
 compine files of js together to make it faster make main.js file
 1.cd frontend
 2.(npm install -D webpack webpack-cli webpack-dev-server)
 these backages ==>> are called development mood - development dependencies
-
+cor
 (npm install -D webpack webpack-cli) the two first backages
 ===> make it possiple to combine all js files and build final main.js
 the last backage
@@ -51,3 +57,42 @@ notes:
 webpack is a backage only for frontend
 node.js-backage.json shouldbe in them location to prevent mistakes
 compatibility items an important to work correctly with each other
+
+10.<<npm install axios>> (axios library) in <<frontend folder>>
+11.change fetch to axios in HomeScreen
+
+5-4-2021
+A-
+instal babel transpiler for ES6 syntax in the backend
+remove all terminal and in the root folder
+1.(npm install -D @babel/core @babel/cli @babel/node @babel/preset-env) in the root
+2.create (.babelrc )file in the root the formate inside it is jsonso we will write
+and set presets to @babel/preset-env create this settings below inside pranthis
+
+({
+"presets": [
+[
+"@babel/preset-env",
+{
+"targets":{
+"node":"current"
+}
+}
+]
+]
+})
+
+3.(npm install -D nodemon) is the same
+node backend ("start": "node backend/server.js") but the diffrence is it work the code and run it automatically we dont need to start the code every time to run
+4.update in package.json root start: nodemon --watch backend --exec babel-node backend/server.js
+("start": "nodemon --watch backend --exec babel-node backend/server.js")
+nodemon --watch ===>backend watch the backend
+--exec ===> any change it will be run with this
+babel ==> turn to ES6
+node ===> make javascript back end file to run
+backend/server.js ==> the file that babel will work with
+5.npm start
+6.convert (require to import) in server.js as ES6
+7.convert data.js syntax ES5 to ES6
+
+b-
