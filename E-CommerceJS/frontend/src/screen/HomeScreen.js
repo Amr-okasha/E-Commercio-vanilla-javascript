@@ -1,5 +1,6 @@
 // import data from "../javascript/data.js" the backend instead of this
 import axios from 'axios';
+import Rating from '../components/Rating';
 const HomeScreen = {
     render: async () => {
         //  const { products } = data this has commented becouse the backend is created
@@ -27,6 +28,9 @@ const HomeScreen = {
                         </a>
                         <div class="product-name">
                             <a href="/#/product/1"> ${product.name1} </a>
+                        </div>
+                        <div class="product-rating-ah">
+                        ${Rating.render({ value: product.rating, text: `${product.numberReviews} reviews` })}
                         </div>
                         <div class="product-brand">
                             <p>${product.brand}</p>

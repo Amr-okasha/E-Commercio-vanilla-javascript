@@ -98,6 +98,7 @@ backend/server.js ==> the file that babel will work with
 
 b-
 code linting feature in backend
+this way dosent work should try to run it with npx see traversy
 help developer to fin error faster and fix them easier
 1.use eslint as acode linter in server .js
 2.root folder install eslint as dev dependencies

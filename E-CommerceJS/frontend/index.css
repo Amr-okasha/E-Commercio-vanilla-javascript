@@ -14,6 +14,7 @@ html {
   --subColor: rgb(248, 232, 10);
   --subColordark: rgb(160, 149, 4);
   --black: black;
+  --gold: gold;
 }
 body {
   height: 100vh;
@@ -92,8 +93,8 @@ footer {
   height: 100%;
 }
 .product img {
-  max-height: 15rem;
-  max-width: 15rem;
+  max-height: 10rem;
+  max-width: 12rem;
   margin-top: 0.1rem;
 }
 .product-name {
@@ -128,4 +129,11 @@ footer {
   header {
     padding-left: 20px;
   }
+}
+.rating {
+  color: var(--gold);
+}
+.rating span:last-child {
+  color: var(--thirdColor);
+  font-size: 0.7rem;
 }

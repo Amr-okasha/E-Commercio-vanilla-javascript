@@ -32,3 +32,4 @@ fetch data from backend
 26.convert data from ES5 to ES6 in the front End
 27.add some data to package.json in the root folder to turn ES6 and run data without npm start
 28.code linting features
+29.create rating component

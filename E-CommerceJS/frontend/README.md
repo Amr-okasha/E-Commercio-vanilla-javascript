@@ -40,3 +40,15 @@ https://marketplace.visualstudio.com/items?itemName=gsheru.vscode-inject-html-le
 9.if routes exists render it ,else render 404
 10.creat screen/error.js and render error message
 11.we will open the link then add /api/products to the link like we wrote it in the backend get
+6/4/2021
+create rating Component
+1.create component/Rating.js
+2.create div rating
+3.link to font awesome.css in index.html
+4.define rating object with render()
+5.if !props.value return empty div
+6.else use fa fa-star ,fa-star-half-o and fa-star-o
+7.last span for props.text ||""
+8.style div.rating, span and last apan
+9.edit home screen
+10.add div.product-rating and use rating component
