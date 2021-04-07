@@ -34,3 +34,5 @@ fetch data from backend
 28.code linting features
 29.create rating component
 30.create product screen for each product
+31.centralize the api.js and make all axios and fetch data create through it
+32.handle the error and show the error message and the error that comes from back end

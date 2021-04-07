@@ -13,19 +13,30 @@ app.use(cors())//this  also for cors but we make it after app bcouse app is cons
 
 //get is http request -to do the new route -put the link and the second parameter1
 app.get('/api/products', (req, res) => {
+    console.log(data.products)
     res.send(data.products)
+
 })
 //add new router 4 for each product 4
 //req.params.id its exactly the id :id in the request
 //if it dosent exist we will make const for the statement and declare variable 
 //that we will use in the if  condition
 app.get("/api/products/:id", (req, res) => {
-    const product = data.products.find((x) => x.id === req.params.id)
+
+    const product = data.products.find((ele) => ele.id === req.params.id)
+    // console.log("####", req)
+    // console.log("####", req.params)
+    // console.log("####", req.params.id)
     if (product) {
-        console.log(product)
+        // console.log(product)
         res.send(product);
     } else {
+        // console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+        // console.log("******", res)
+
+
         res.status(404).send({ message: "product not found" })
+
     }
 })
 

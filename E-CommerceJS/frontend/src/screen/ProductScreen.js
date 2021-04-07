@@ -7,8 +7,10 @@ const ProductScreen = {
         const request = parseRequestUrl()
         const baseUrl = `${apiUrl}/api/products/${request.id}`
         const product = await getProduct(baseUrl)
-        console.log(product)
-
+        console.log(product.error)
+        if (product.error) {
+            return (`<div>${product.error}<div>`)
+        }
         // to get getProduct(request.id)   inside src folder we will create
         //api.js to define  function that get api products
         //after make the back end we will render here

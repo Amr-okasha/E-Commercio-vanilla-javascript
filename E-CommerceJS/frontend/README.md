@@ -56,8 +56,10 @@ put props as argument to path data
 create product screen
 1.get product id from request
 2.implement /api/product/:id api
-3.send ajax request to product api
-4.create backend to result link
+3.send ajax request to product api (and handle the error and get the error message of the backend the orginal and the one that we have made) add it to productScreen.js
+4.create backend to result(each single product) link (add new end poind)
+4.1.#centralize the api.js and make all axios and fetch data create through it
+4.2.create config.js to reach the api
 5.create div .details with 3 colums
 6.colum 1 for product image
 7.colum 2 for product info

@@ -9,7 +9,7 @@ const HomeScreen = {
         //instead of the last statement we will make fetch api
 
         const baseUrl = `${apiUrl}/api/products`
-        console.log(baseUrl)
+        // console.log(baseUrl)
         const product1 = await getProduct(baseUrl)
         //make api.js that control all apis after create product screen axios method
         // const response = await axios({
@@ -23,7 +23,7 @@ const HomeScreen = {
         //     return `<div>Error in getting data</div>`
         // }
         const products = product1;
-        console.log(products)
+        // console.log(products)
         return `
         <ul class="products">
         ${products.map(product => `

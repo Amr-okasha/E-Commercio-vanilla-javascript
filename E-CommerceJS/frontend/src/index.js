@@ -10,9 +10,9 @@ const routes = {
 
 const router = async () => {
     const request = parsrRequestURL()
-    console.log(request.resource)
-    console.log(request.id)
-    console.log(request.action)
+    // console.log(request.resource)
+    // console.log(request.id)
+    // console.log(request.action)
     const parseURL = (request.resource ? `/${request.resource}` : `/`) +
         (request.id ? "/:id" : "") + (request.action ? `/${request.action}` : "")
     const screen = routes[parseURL] ? routes[parseURL] : Error404Screen;
