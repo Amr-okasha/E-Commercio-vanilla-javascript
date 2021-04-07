@@ -8,11 +8,11 @@ html {
 }
 :root {
   --mainColor: rgb(0, 103, 134);
-  --secodColor: rgb(218, 216, 216);
+  --secodColor: rgb(233, 229, 229);
   --thirdColor: darkgrey;
   --whiteColor: white;
   --subColor: rgb(248, 232, 10);
-  --subColordark: rgb(160, 149, 4);
+  --subColordark: rgba(168, 157, 4, 0.308);
   --black: black;
   --gold: gold;
 }
@@ -28,6 +28,26 @@ a {
 }
 a:hover {
   color: var(--subColordark);
+}
+button {
+  font: helvetica;
+  padding: 0.5rem;
+
+  cursor: pointer;
+
+  font-size: 20px;
+}
+button:hover {
+  border: 0.1rem solid var(--thirdColor);
+}
+.primary {
+  border: 0.1rem solid var(--mainColor);
+  background-color: var(--subColordark);
+  color: var(--mainColor);
+  font-weight: 600;
+}
+.fw {
+  width: 100%;
 }
 .grid-container {
   display: grid;
@@ -136,4 +156,54 @@ footer {
 .rating span:last-child {
   color: var(--thirdColor);
   font-size: 0.7rem;
+}
+.content {
+  padding: 1rem;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.details-image {
+  flex: 2 2 50%;
+}
+
+.details-image img {
+  max-width: 80%;
+  width: 100%;
+}
+.details-info {
+  flex: 2 1 25%;
+}
+.details-action {
+  flex: 1 1 25%;
+}
+.details-info ul,
+.details-action ul {
+  padding: 0;
+  list-style-type: none;
+}
+.details-info h1 {
+  font-size: 1.5rem;
+}
+.details-action li,
+.details-info li {
+  margin-bottom: 1rem;
+}
+.details-action {
+  border: 0.1rem solid var(--mainColor);
+  text-align: center;
+  border-radius: 3px;
+  background-color: var(--secodColor);
+  padding: 1rem;
+}
+.mc {
+  color: var(--mainColor);
+  font-size: 20px;
+  font-weight: 500;
+}
+.ms:hover {
+  color: black;
 }

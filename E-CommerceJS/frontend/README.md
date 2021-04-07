@@ -60,6 +60,7 @@ create product screen
 4.create backend to result(each single product) link (add new end poind)
 4.1.#centralize the api.js and make all axios and fetch data create through it
 4.2.create config.js to reach the api
+7/4/2021
 5.create div .details with 3 colums
 6.colum 1 for product image
 7.colum 2 for product info
