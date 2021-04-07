@@ -46,9 +46,23 @@ create rating Component
 2.create div rating
 3.link to font awesome.css in index.html
 4.define rating object with render()
+put props as argument to path data
 5.if !props.value return empty div
 6.else use fa fa-star ,fa-star-half-o and fa-star-o
 7.last span for props.text ||""
 8.style div.rating, span and last apan
 9.edit home screen
 10.add div.product-rating and use rating component
+create product screen
+1.get product id from request
+2.implement /api/product/:id api
+3.send ajax request to product api
+4.create backend to result link
+5.create div .details with 3 colums
+6.colum 1 for product image
+7.colum 2 for product info
+8.colum 3 for product action
+9.style .details and all columns
+10.create add to cart button with add-button id
+11.after render() to add event to the button
+12.redirect user to cart/:product_id

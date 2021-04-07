@@ -78,7 +78,7 @@ footer {
   justify-content: center;
 }
 .products li {
-  flex: 0 1 30rem;
+  flex: 0 1 20rem;
   margin: 1rem;
   margin-bottom: 0;
   height: 14rem;

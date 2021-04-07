@@ -33,3 +33,4 @@ fetch data from backend
 27.add some data to package.json in the root folder to turn ES6 and run data without npm start
 28.code linting features
 29.create rating component
+30.create product screen for each product

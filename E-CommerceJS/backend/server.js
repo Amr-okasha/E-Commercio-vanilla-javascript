@@ -15,6 +15,19 @@ app.use(cors())//this  also for cors but we make it after app bcouse app is cons
 app.get('/api/products', (req, res) => {
     res.send(data.products)
 })
+//add new router 4 for each product 4
+//req.params.id its exactly the id :id in the request
+//if it dosent exist we will make const for the statement and declare variable 
+//that we will use in the if  condition
+app.get("/api/products/:id", (req, res) => {
+    const product = data.products.find((x) => x.id === req.params.id)
+    if (product) {
+        console.log(product)
+        res.send(product);
+    } else {
+        res.status(404).send({ message: "product not found" })
+    }
+})
 
 //this to make it run 1
 app.listen(5000, () => {

@@ -1,22 +1,28 @@
 // import data from "../javascript/data.js" the backend instead of this
 import axios from 'axios';
 import Rating from '../components/Rating';
+import { getProduct } from "../api.js"
+import { apiUrl } from "../config"
 const HomeScreen = {
     render: async () => {
         //  const { products } = data this has commented becouse the backend is created
         //instead of the last statement we will make fetch api
 
-        const response = await axios({
-            url: "http://localhost:5000/api/products",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-        if (!response || response.statusText !== "OK") {
+        const baseUrl = `${apiUrl}/api/products`
+        console.log(baseUrl)
+        const product1 = await getProduct(baseUrl)
+        //make api.js that control all apis after create product screen axios method
+        // const response = await axios({
+        //     url: "http://localhost:5000/api/products",
+        //     headers: {
+        //         "Content-Type": "application/json"
+        //     }
+        // })
+        // if (!response || response.statusText !== "OK") {
 
-            return `<div>Error in getting data</div>`
-        }
-        const products = response.data;
+        //     return `<div>Error in getting data</div>`
+        // }
+        const products = product1;
         console.log(products)
         return `
         <ul class="products">

@@ -1,7 +1,7 @@
 import Error404Screen from "./screen/Error404Screen.js"
 import HomeScreen from "./screen/HomeScreen.js"
 import ProductScreen from "./screen/ProductScreen.js"
-import { parsrRequestURL } from "./utils.js"
+import parsrRequestURL from "./utils.js"
 
 const routes = {
     "/": HomeScreen,
