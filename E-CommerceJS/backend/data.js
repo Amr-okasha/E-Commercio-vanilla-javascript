@@ -32,7 +32,7 @@ export default {
             brand: "Janssen",
             rating: 4.5,
             numberReviews: 10,
-            countInStock: 0,
+            countInStock: 30,
             description: `Specification:Classic L Shape sofa from Bed Janssen manufactured from steel chassis for back and seats, bonnell springs, ‎layers of cotton to provide necessary relaxation as well as isolating felt and comes with spacious storage ‎area and fabric type: Zero
             Steel chassis for back & seat - 1mm
             Bonnell springs
@@ -47,7 +47,7 @@ export default {
             brand: "Janssen",
             rating: 4.5,
             numberReviews: 10,
-            countInStock: 6,
+            countInStock: 1,
             description: `Specification:Costa sofa bed is a multiple use couch that can be unfolded to bed chaise lounge, manufactured from natural wood, polyurethane hard foam density 28 with stainless steel legs Sabia fabric
             Natural wood chassis - 1 inch.
             Polyurethane foam density 28‎
@@ -65,7 +65,7 @@ export default {
             brand: "Janssen",
             rating: 3.5,
             numberReviews: 10,
-            countInStock: 6,
+            countInStock: 15,
             description: `Specification:Diana L shape fixed sofa is built from wood chassis, legs are made for beech wood and super soft ‎Polyurethane foam density 35 to provide more & more relaxation for body during seating and comes with ‎fabric type: Candy
             Wooden chassis, legs are made from beech wood
             Super soft Polyurethane foam density 35
@@ -81,7 +81,7 @@ export default {
             brand: "Janssen",
             rating: 4.3,
             numberReviews: 10,
-            countInStock: 6,
+            countInStock: 10,
             description: `Specification:Costa sofa bed is a multiple use couch that can be unfolded to bed chaise lounge, manufactured from natural wood, polyurethane hard foam density 28 with stainless steel legs Sabia fabric.
             Natural wood chassis - 1 inch.
             Polyurethane foam density 28‎
@@ -99,7 +99,7 @@ export default {
             brand: "Janssen",
             rating: 4.9,
             numberReviews: 10,
-            countInStock: 6,
+            countInStock: 20,
             description: `Specification:Zegana sofa bed from Bed Janssen is composed from steel chassis for back seat areas with bonnell springs, layers of cotton and Polyurethane foam for perfect relaxation along with layer of isolating felt and comes with fabric type Sabia and spacious storage area
             Steel chassis for back seat 1 mm
             Bonnell springs

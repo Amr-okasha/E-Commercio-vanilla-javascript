@@ -42,5 +42,9 @@ fetch data from backend
 36.redirect user to cart/:product_id and callback it with await to get a promise to just run router function with the new route.
 8/4/2021
 add to cart action link to local storage
-11/42021
+11/4/2021
+a-
 create product cart screen ui
+b-
+finish shopping-cart what we going to do delete and update qty acions
+and also when user click on proceed to check-out button redirct to sign in page

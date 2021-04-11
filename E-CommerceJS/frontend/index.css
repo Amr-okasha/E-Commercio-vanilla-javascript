@@ -274,8 +274,6 @@ footer {
   font-size: 10px;
 }
 .cart-list-container > li .cart-name select {
-  width: 15px;
-  height: 15px;
   font-size: 15px;
 }
 .cart-list-container > li .cart-price {
@@ -302,6 +300,7 @@ footer {
     flex: 1 1 70%;
     font-size: 13px;
   }
+
   .cart-list-container > li .cart-name button {
     font-size: 10px;
   }

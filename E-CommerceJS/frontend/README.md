@@ -80,6 +80,7 @@ add to cart action link to local storage
 7.if exist? item update qty:Add item
 8.set cart items
 11/4/2021
+a-
 create product cart screen ui
 1.create html an css for cart screen
 which consists of cart-list /cart-action
@@ -92,3 +93,22 @@ delete-button that delete undesired products
 the qty and the price which diplayed from reduce function
 and the second one is abutton which transfer to the log-in to proceed the action
 note:remain the media-querey for small screens
+
+b-
+Update and Delete Cart Items
+
+add qty select next to each item
+after_render()
+add change event to qty select
+getCartItems() and pass to addToCart()
+set force to true to addToCart()
+create rerender() as (component, areaName = 'content')
+component.render and component.after_render
+if force is true then rerender()
+add delete button next to each item
+add click event to qty button
+call removeFromCart(deleteButton.id)
+implement removeFromCart(id)
+setCartItems( getCartItems().filter)
+if id === parseRequestUrl().id? redirect to '/cart'
+else rerender(CartScreen);
