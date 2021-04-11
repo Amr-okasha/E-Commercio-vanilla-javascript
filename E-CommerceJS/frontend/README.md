@@ -66,6 +66,16 @@ create product screen
 7.colum 2 for product info
 8.colum 3 for product action
 9.style .details and all columns
-10.create add to cart button with add-button id
-11.after render() to add event to the button
-12.redirect user to cart/:product_id
+10.create add to cart button with (add-button) id
+11.after_render()new method to add event to the button
+12.redirect user to cart/:product_id and callback it with await to get a promise to just run router function with the new route.
+8/4/2021
+add to cart action
+1.create CartScreen.js
+2.parseRequestURL() to get request.id and get the link form config
+3.getproduct(baseUrl)
+4.addToCart()
+5.get cart items
+6.cart items.find
+7.if exist? item update qty:Add item
+8.set cart items

@@ -32,7 +32,7 @@ export default {
             brand: "Janssen",
             rating: 4.5,
             numberReviews: 10,
-            countInStock: 51,
+            countInStock: 0,
             description: `Specification:Classic L Shape sofa from Bed Janssen manufactured from steel chassis for back and seats, bonnell springs, ‎layers of cotton to provide necessary relaxation as well as isolating felt and comes with spacious storage ‎area and fabric type: Zero
             Steel chassis for back & seat - 1mm
             Bonnell springs

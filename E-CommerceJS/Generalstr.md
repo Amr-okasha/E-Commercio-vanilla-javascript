@@ -36,3 +36,8 @@ fetch data from backend
 30.create product screen for each product
 31.centralize the api.js and make all axios and fetch data create through it
 32.handle the error and show the error message and the error that comes from back end
+33.create div .details with 3 colums
+34.create add to cart button with (add-button) id
+35.after_render()new method to add event to the button
+36.redirect user to cart/:product_id and callback it with await to get a promise to just run router function with the new route.
+8/4/2021

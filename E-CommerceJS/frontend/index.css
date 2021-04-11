@@ -207,3 +207,12 @@ footer {
 .ms:hover {
   color: black;
 }
+.success {
+  color: var(--mainColor);
+}
+.error {
+  color: red;
+}
+*:focus {
+  outline: 0;
+}

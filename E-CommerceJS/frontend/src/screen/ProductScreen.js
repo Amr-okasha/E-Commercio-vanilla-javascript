@@ -1,14 +1,25 @@
-import parseRequestUrl from "../utils.js";
+import parsrRequestURL from "../utils.js";
 import { getProduct } from "../api.js";
 import { apiUrl } from "../config";
 import Rating from "../components/Rating.js";
+
 const ProductScreen = {
+    //we can use this method after_render instead of 
+    //anchor tag i the diplay-render of the single product
+    //to add-button cart
+    after_render: () => {
+        document.getElementById("add-button").addEventListener("click", () => {
+            const request = parsrRequestURL()
+            document.location.hash = `/cart/${request.id}`
+
+        })
+    },
     render: async () => {
         //     return `<div>ProductScreen</div>` its trial till we start make products screen
-        const request = parseRequestUrl();
+        const request = parsrRequestURL();
         const baseUrl = `${apiUrl}/api/products/${request.id}`;
         const product = await getProduct(baseUrl);
-        console.log(product.error);
+        // console.log(product.error);
         if (product.error) {
             return `<div>${product.error}<div>`;
         }
@@ -48,8 +59,10 @@ const ProductScreen = {
                 ? `<span class=success >In Stock</span>`
                 : `<span class="error">Un Availabale</span>`}
         </li>
-        <li >
-        <button class=" fw primary">Add to cart </button>
+        <li>
+        
+        <button class=" fw primary" id="add-button">Add to cart </button>
+     
         </li>
         </ul>
         </div>

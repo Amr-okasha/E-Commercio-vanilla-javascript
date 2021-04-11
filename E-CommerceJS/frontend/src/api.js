@@ -1,5 +1,5 @@
 
-import { apiUrl } from "./config"
+
 import axios from "axios"
 
 export const getProduct = async (baseUrl) => {
@@ -12,14 +12,14 @@ export const getProduct = async (baseUrl) => {
                 "Content-Type": "application/json",
             }
         })
-        console.log(response.data.message)
+        // console.log(response.data.message)
         // its important if the request is correct  but dosnt work
         if (response.statusText !== "OK") {
             throw new Error(response.data.message)
         }
         return response.data
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         return { error: err.response.data.message || err.message }
     }
 }
