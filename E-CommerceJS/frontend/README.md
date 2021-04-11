@@ -70,7 +70,7 @@ create product screen
 11.after_render()new method to add event to the button
 12.redirect user to cart/:product_id and callback it with await to get a promise to just run router function with the new route.
 8/4/2021
-add to cart action
+add to cart action link to local storage
 1.create CartScreen.js
 2.parseRequestURL() to get request.id and get the link form config
 3.getproduct(baseUrl)
@@ -79,3 +79,16 @@ add to cart action
 6.cart items.find
 7.if exist? item update qty:Add item
 8.set cart items
+11/4/2021
+create product cart screen ui
+1.create html an css for cart screen
+which consists of cart-list /cart-action
+display elments from local storage with map function
+2.cart-list contains 3 container cart-image cart-name cart-price
+3.cart-name contains anchor-tag which represent product-name
+and also select-box which allow client to slelect needed qty
+delete-button that delete undesired products
+4.cart-action contains two containers
+the qty and the price which diplayed from reduce function
+and the second one is abutton which transfer to the log-in to proceed the action
+note:remain the media-querey for small screens

@@ -41,3 +41,6 @@ fetch data from backend
 35.after_render()new method to add event to the button
 36.redirect user to cart/:product_id and callback it with await to get a promise to just run router function with the new route.
 8/4/2021
+add to cart action link to local storage
+11/42021
+create product cart screen ui
