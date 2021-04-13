@@ -57,7 +57,7 @@ const CartScreen = {
         })
         const proceedChekOut = document.getElementById("proceed-to-checkout")
         proceedChekOut.addEventListener("click", () => {
-            document.location.hash = "/dignin"
+            document.location.hash = "/signin"
         })
     },
     render: async () => {

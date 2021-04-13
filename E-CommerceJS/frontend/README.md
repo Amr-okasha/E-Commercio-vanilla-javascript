@@ -95,20 +95,97 @@ and the second one is abutton which transfer to the log-in to proceed the action
 note:remain the media-querey for small screens
 
 b-
-Update and Delete Cart Items
+1.Update and Delete Cart Items
 
-add qty select next to each item
-after_render()
-add change event to qty select
-getCartItems() and pass to addToCart()
-set force to true to addToCart()
-create rerender() as (component, areaName = 'content')
-component.render and component.after_render
-if force is true then rerender()
-add delete button next to each item
-add click event to qty button
-call removeFromCart(deleteButton.id)
-implement removeFromCart(id)
-setCartItems( getCartItems().filter)
-if id === parseRequestUrl().id? redirect to '/cart'
+2.add qty select next to each item
+3.after_render()
+4.add change event to qty select
+5.getCartItems() and pass to addToCart()
+6.set force to true to addToCart()
+7.create rerender() as (component, areaName = 'content')
+8.component.render and component.after_render
+9.if force is true then rerender()
+10.add delete button next to each item
+11.add click event to qty button
+12.call removeFromCart(deleteButton.id)
+13.implement removeFromCart(id)
+14.setCartItems( getCartItems().filter)
+15.if id === parseRequestUrl().id? redirect to '/cart'
 else rerender(CartScreen);
+
+c-
+connect to mango and create admin user
+
+1.(npm install mangoose) in the root of new terminal
+its like orm relation or maper make it possible to work with javascript object inside node application and save those javascript as mangodb document inside mangoo db collection
+2.connect to mango db
+open server.js
+import mongoose from "mongoose"
+connect >>>
+mongoose.connect(config.MONGODB_URL, {
+userNewURLParser: true,
+userUnifiedTopology: true,
+userCreateIndex: true
+}).catch((error) => {
+console.log(error.reason)
+})
+<<<
+
+add this proprtios as second param to mongo to stop error in console
+catch error to get erros sending data to database
+
+3.create config.js
+define mangodb url there
+in the backend
+in this file we will install env backage
+in the next step
+4.npm install dotenv
+by using this backage we can difine enviroment variables inside any file in the root
+4.in the roote folder we will create new file .env
+this format helps to set enviroment variables
+MONGODB_URL=mongo://localhost/databasename
+MONGODB_URL is a variable
+mongo://localhost/ is the main link
+databasename is an placeholder for the name of the project data base
+4.1 import it in the config to use it in server.js
+
+a> > > import dotenv from "dotenv"<<<<
+
+> > > then write
+
+b> > dotenv.config()<<<
+
+by calling the previous function dotenv read .env file that we have created in the root folder
+then export port and mongoDb url
+process.env.MONGODB_URL this is the value that we entered in the .env file
+write in the config
+c> > > > export default{
+
+    MONGODB_URL:process.env.MONGODB_URL
+
+}<<<<
+4.2
+a.then in server.js should import config which contains the url that the backend will use we will simple import the file
+to assure that mangoo db is working we will add .then and enter a console message
+to preview it in the console in case of the mangoo db is working
+d>>>>> mongoose.connect(config.MONGODB_URL, {
+userNewURLParser: true,
+userUnifiedTopology: true,
+userCreateIndex: true
+})
+.then(() => {
+console.log("connected to mangoo db")
+
+    }).catch((error) => {
+        console.log(error.reason)
+    })<<<<
+
+b. we will close the old backend and open new one to show mangoo db if it works
+
+6.create models / usermodels.js
+7.create user schema and userModel to make a user in data base acording to the schema that we have created
+8.create user route to save adminUser with userModel
+9.create admin route
+
+c-
+d-create loginScrean.js the display UI html and css and connect them to the index.js

@@ -1,6 +1,7 @@
 import CartScreen from "./screen/cartScreen.js"
 import Error404Screen from "./screen/Error404Screen.js"
 import HomeScreen from "./screen/HomeScreen.js"
+import LoginScreen from "./screen/LoginScreen.js"
 import ProductScreen from "./screen/ProductScreen.js"
 import parsrRequestURL from "./utils.js"
 
@@ -8,7 +9,8 @@ const routes = {
     "/": HomeScreen,
     "/product/:id": ProductScreen,
     "/cart/:id": CartScreen,
-    "/cart": CartScreen
+    "/cart": CartScreen,
+    "/signin": LoginScreen,
 }
 
 const router = async () => {

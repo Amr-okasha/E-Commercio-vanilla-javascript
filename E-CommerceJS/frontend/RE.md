@@ -179,3 +179,44 @@ implement removeFromCart(id)
 setCartItems( getCartItems().filter)
 if id === parseRequestUrl().id? redirect to '/cart'
 else rerender(CartScreen);
+
+Connect To MongoDB and Create Admin User
+npm install mongoose
+connect to mongodb
+create config.js
+npm install dotenv
+export MONGODB_URL
+create models/userModel.js
+create userSchema and userModel
+create userRoute
+create createadmin route
+Sign-in Screen UI
+create SigninScreen
+render email and password fields
+style signin form
+
+((setup MongoDB
+Download and Install it from mongodb.com 3. Create .env file
+Create .env file in project folder
+Enter these lines to that:
+MONGODB_URL=mongodb://localhost/jsamazona
+JWT_SECRET=somethingsecret
+PAYPAL_CLIENT_ID=db 4. Run Backend
+$ npm install
+$ npm run build
+$ npm start 5. Run Frontend
+
+# open new terminal
+
+$ cd frontend
+$ npm install
+$ npm start 6. Create Admin User
+Run this on chrome: http://localhost:5000/api/users/createadmin
+Note admin email and password 7. Admin Login
+Run http://localhost:8080/#/signin
+Enter admin email and password and click signin
+Click Dashboard Link on Header Menu
+Click Products on left sidebar
+Click Create Product Button
+Enter Product Information
+Go to home page (http://localhost:8080) and test Ecommerce Website)))

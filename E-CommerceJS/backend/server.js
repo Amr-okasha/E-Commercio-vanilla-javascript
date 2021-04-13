@@ -6,11 +6,27 @@
 import express from "express"
 import cors from "cors"
 import data from "./data.js"
+import mongoose from "mongoose"
+import config from "./config.js"
+import userRouter from "./userRouter/userRoute.js"
 
+
+
+mongoose.connect(config.MONGODB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+})
+    .then(() => {
+        console.log("connected to mangoo db")
+
+    }).catch((error) => {
+        console.log(error.reason)
+    })
 const app = express(); //express function and that function returns an object 1
 //which is our vib app
 app.use(cors())//this  also for cors but we make it after app bcouse app is const 2
-
+app.use('/api/users', userRouter)
 //get is http request -to do the new route -put the link and the second parameter1
 app.get('/api/products', (req, res) => {
     console.log(data.products)

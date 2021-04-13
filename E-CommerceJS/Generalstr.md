@@ -48,3 +48,4 @@ create product cart screen ui
 b-
 finish shopping-cart what we going to do delete and update qty acions
 and also when user click on proceed to check-out button redirct to sign in page
+c-Connect To MongoDB and Create Admin User
