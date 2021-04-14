@@ -189,3 +189,20 @@ b. we will close the old backend and open new one to show mangoo db if it works
 
 c-
 d-create loginScrean.js the display UI html and css and connect them to the index.js
+14/4/2021
+
+signin screen backend
+1.create signin api in backend
+2.create route -create route for /api/users/signin in userRouter it is post request
+3.create check user name password
+4.if it is not ok the return 404 error
+5.install express async handler
+6.wrap it in express async handler
+7.add error middle ware in server.js
+8.install postman
+9.send post request test with invalid user password
+10.other wise generate token
+11.install json web token
+12.set config.jwt_SECRET to somethingsecret
+13.add generation tokens to utils.js
+14.return token

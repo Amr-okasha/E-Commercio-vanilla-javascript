@@ -9,6 +9,7 @@ import data from "./data.js"
 import mongoose from "mongoose"
 import config from "./config.js"
 import userRouter from "./userRouter/userRoute.js"
+import bodyParser from "body-parser"
 
 
 
@@ -27,6 +28,8 @@ const app = express(); //express function and that function returns an object 1
 //which is our vib app
 app.use(cors())//this  also for cors but we make it after app bcouse app is const 2
 app.use('/api/users', userRouter)
+//for sign-in to be able to read the body section
+app.use(bodyParser.json())
 //get is http request -to do the new route -put the link and the second parameter1
 app.get('/api/products', (req, res) => {
     console.log(data.products)
@@ -55,7 +58,9 @@ app.get("/api/products/:id", (req, res) => {
 
     }
 })
-
+app.use((err, req, res, next) => {
+    const status = err.name && err.name == "validationError" ? 400 : 500
+})
 //this to make it run 1
 app.listen(5000, () => {
     console.log("server at http://localhost:5000")

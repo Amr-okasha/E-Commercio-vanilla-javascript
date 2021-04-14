@@ -23,6 +23,7 @@ const LoginScreen = {
             New user :
             <a href="/#/register">Create new account</a>
         </li>
+        
     </ul>
 </form>
 
