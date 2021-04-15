@@ -416,3 +416,31 @@ footer {
 .form-items > li:nth-child(5) {
   font-size: 12px;
 }
+.over-lay {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 16, 16, 0.5);
+}
+.over-lay.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+}
+.over-lay > div {
+  background-color: aliceblue;
+  color: black;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 40rem;
+}
+.over-lay > div > * {
+  margin: 2rem;
+}

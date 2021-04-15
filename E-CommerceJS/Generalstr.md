@@ -51,4 +51,10 @@ and also when user click on proceed to check-out button redirct to sign in page
 c-Connect To MongoDB and Create Admin User
 d-create loginScrean.js the display UI html and css and connect them to the index.js
 14-4-2021
+a-
+backend
 implement user account in backend
+b-
+complete sign in screen
+c-
+pop up message for invalid user (alert component)and over lay loading(progress indicator)

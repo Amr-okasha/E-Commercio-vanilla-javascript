@@ -1,7 +1,7 @@
 import express from 'express'
 import User from '../models/userModels';
-
-import expressAsyncHandler from "expressAsyncHandler"
+import expressAsyncHandler from 'express-async-handler';
+//  wrong syntax import expressAsyncHandler from "expressAsyncHandler"
 import { generateToken } from '../utils';
 
 const userRouter = express.Router()
@@ -22,7 +22,7 @@ userRouter.get('/createadmin', expressAsyncHandler(async (req, res) => {
 })
 );
 //send request to database to get data for this email and password
-user.post("signin", expressAsyncHandler(async (req, res) => {
+userRouter.post("/signin", expressAsyncHandler(async (req, res) => {
     //get access to user model from mongoose call find one is object like filter
     const signinUser = await User.findOne({
         //to send to front end data that have sent in http request get in frontend req.body
@@ -89,6 +89,7 @@ user.post("signin", expressAsyncHandler(async (req, res) => {
     }
 })
 );
-export default userRouter;
 
+
+export default userRouter;
 

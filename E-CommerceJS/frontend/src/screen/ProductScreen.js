@@ -1,4 +1,4 @@
-import parsrRequestURL from "../utils.js";
+import parsrRequestURL, { hideLoading, showLoading } from "../utils.js";
 import { getProduct } from "../api.js";
 import { apiUrl } from "../config";
 import Rating from "../components/Rating.js";
@@ -18,8 +18,10 @@ const ProductScreen = {
         //     return `<div>ProductScreen</div>` its trial till we start make products screen
         const request = parsrRequestURL();
         const baseUrl = `${apiUrl}/api/products/${request.id}`;
+        // showLoading()
         const product = await getProduct(baseUrl);
         // console.log(product.error);
+        // hideLoading()
         if (product.error) {
             return `<div>${product.error}<div>`;
         }

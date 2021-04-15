@@ -1,6 +1,7 @@
 
 
 import axios from "axios"
+import { apiUrl } from "./config"
 
 export const getProduct = async (baseUrl) => {
     try {
@@ -22,6 +23,32 @@ export const getProduct = async (baseUrl) => {
         // console.log(err)
         return { error: err.response.data.message || err.message }
     }
+}
+
+
+export const signin = async ({ email, password }) => {
+    try {
+        const response = await axios({
+            url: `${apiUrl}/api/users/signin`,
+            method: "POST",
+            headers: {
+                "Content-Type": "application/Json"
+            },
+            data: {
+                email,
+                password,
+            }
+        })
+        if (response.statusText !== "OK") {
+            throw new Error(resopons.data.message)
+        }
+        return response.data
+    } catch (err) {
+        console.log(err)
+        return { error: err.response.data.message || err.message }
+
+    }
+
 }
 //after create this http request we will emplement this to the back end
 // go to the server .js and create step num 4

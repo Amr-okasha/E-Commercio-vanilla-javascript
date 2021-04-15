@@ -190,7 +190,7 @@ b. we will close the old backend and open new one to show mangoo db if it works
 c-
 d-create loginScrean.js the display UI html and css and connect them to the index.js
 14/4/2021
-
+a-
 signin screen backend
 1.create signin api in backend
 2.create route -create route for /api/users/signin in userRouter it is post request
@@ -206,3 +206,31 @@ signin screen backend
 12.set config.jwt_SECRET to somethingsecret
 13.add generation tokens to utils.js
 14.return token
+b-
+complete sign-in screen action
+connect front end with backend
+if validate will show pop up message with invalid other wise
+it will write the name at the top of the screen
+1.after render handle form submit
+2.create signin request in the front end
+3.show alert if email or password is incorrect
+4.add getUserInfo and setUserInfo to localStorage
+5.create Header component
+6.if userInfo.email exist show user name otherwise show signin
+c-
+pop up message for invalid user (alert component)and over lay loading(progress indicator)
+
+1.create overlay loading div in index.html
+2.style overlay loading
+3.create show loading function in utils.js
+4.set loading-overlay message
+5.create hideloading() function
+6.create overlay message
+7.add style overlay message
+8.create show (message,callback)
+9.document message-overlay-content
+10.div > div id message-overlay-content
+11.show message
+12.button id message-overlay-close-button OK
+13.add class active to it
+14.add eventlistener for button to call callback

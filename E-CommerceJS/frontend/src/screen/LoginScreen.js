@@ -1,9 +1,35 @@
+import { signin } from "../api";
+import { getUserInfo, setUserInfo } from "../localSorage";
+import { hideLoading, showLoading, showMessage } from "../utils";
+
 const LoginScreen = {
-    after_render: () => { },
+    after_render: () => {
+
+
+        const signInForm = document.getElementById("signin-form")
+        signInForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            showLoading()
+            const data = await signin({
+                email: document.getElementById("email").value,
+                password: document.getElementById("password").value
+            })
+            hideLoading()
+            if (data.error) {
+                showMessage(data.error)
+            } else {
+                setUserInfo(data)
+                document.location.hash = "/"
+            }
+        })
+    },
     render: () => {
+        if (getUserInfo().name) {
+            document.location.hash = "/"
+        }
         return `<div class="form-container">
     
-<form class="signin-form">
+<form id="signin-form" class="signin-form">
     <ul class=form-items>
         <li>
             <h1>Log-in</h1>

@@ -27,9 +27,13 @@ mongoose.connect(config.MONGODB_URL, {
 const app = express(); //express function and that function returns an object 1
 //which is our vib app
 app.use(cors())//this  also for cors but we make it after app bcouse app is const 2
-app.use('/api/users', userRouter)
+
 //for sign-in to be able to read the body section
+// in the sign-in app. use should be before app.use for user router
 app.use(bodyParser.json())
+
+app.use('/api/users', userRouter)
+// app.use(express.json());
 //get is http request -to do the new route -put the link and the second parameter1
 app.get('/api/products', (req, res) => {
     console.log(data.products)
@@ -58,8 +62,11 @@ app.get("/api/products/:id", (req, res) => {
 
     }
 })
+// http://localhost:5000/api/products/:id
+//sign-in 
 app.use((err, req, res, next) => {
     const status = err.name && err.name == "validationError" ? 400 : 500
+    res.status(status).send({ message: err.message })
 })
 //this to make it run 1
 app.listen(5000, () => {
