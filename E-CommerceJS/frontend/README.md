@@ -234,3 +234,54 @@ pop up message for invalid user (alert component)and over lay loading(progress i
 12.button id message-overlay-close-button OK
 13.add class active to it
 14.add eventlistener for button to call callback
+15/4/2021
+create profile screen
+1.create ProfileScreen.js
+2.add form element
+3.after_render handle form submit
+4.create profile update request in frontend
+5.create profile update api in backend new userRouter put method
+6.create is auth in utils.js and use in update profile
+is Auth is used to make sure that the owner of acount is the only one have access to update
+to isAuth express middle ware that accept three parameters (req,res,next)
+next meant if every thing goes ok press next
+export const isAuth =(req,res,next) =>{
+const bearerToken =req.header.authorization;
+if(!bearerToken){
+res.status(401).send("Token is not supplied")
+}else{
+const token=bearerToken.slice(7,bearerToken.length)
+jwt.verify(token,config.JWT_SECRET,(err,data)=>{
+// data represent the coded token
+//and the decoded like email password etc
+if(err){
+res.status(401).send({message:"invalid Token")
+}else{
+req.user=data;
+//next() means every thing is ok and the next handler should start
+//proccessing the request
+next()
+}
+
+    })
+
+}
+}
+in the backend userRouter after the id as second param we will put isAuth
+7.implement sign out
+16/4/2021
+a-
+create check-out wezard
+1.create checkoutSteps.js in component folder
+2.create div elements for step 1 to 4
+3.redirectUser() in utils.js
+4.copy profile screen and as shiping screen
+5.use check outStep
+6.define getShipping and setShipping
+7.copy payment screen and as shipping screen
+8.defin get payment and set payment
+9.redirect user to placeOrder.js
+b-
+create placeOrder screen UI
+1.create placeOrder.js
+2.style elements

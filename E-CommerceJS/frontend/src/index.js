@@ -5,6 +5,11 @@ import LoginScreen from "./screen/LoginScreen.js"
 import ProductScreen from "./screen/ProductScreen.js"
 import parsrRequestURL, { hideLoading, showLoading } from "./utils.js"
 import Header from "./components/header.js"
+import RegisterScreen from "./screen/RegisterScreen.js"
+import ProfileScreen from "./screen/ProfileScreen.js"
+import ShippingScreen from "./screen/ShippingScreen.js"
+import PaymentScreen from "./screen/PaymentScreen.js"
+import PlaceOrderScreen from "./screen/PlaceOrderScreen.js"
 
 const routes = {
     "/": HomeScreen,
@@ -12,6 +17,12 @@ const routes = {
     "/cart/:id": CartScreen,
     "/cart": CartScreen,
     "/signin": LoginScreen,
+    "/register": RegisterScreen,
+    "/profile": ProfileScreen,
+    "/shipping": ShippingScreen,
+    "/shipping": ShippingScreen,
+    "/payment": PaymentScreen,
+    "/placeorder": PlaceOrderScreen
 }
 
 const router = async () => {
@@ -35,7 +46,7 @@ const router = async () => {
     // main.innerHTML = HomeScreen.render() insted of this we will put
     main.innerHTML = await screen.render();
     // console.log(main.innerHTML, "main.innerHTML")
-    if (screen.after_render()) { await screen.after_render() }
+    if (screen.after_render) { await screen.after_render() }
     hideLoading()
 
 }

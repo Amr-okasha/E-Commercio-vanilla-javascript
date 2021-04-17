@@ -1,3 +1,5 @@
+import { getCartItems } from "./localSorage";
+
 const parsrRequestURL = () => {
     const url = document.location.hash.toLowerCase();
     // console.log(url, "url")
@@ -36,4 +38,11 @@ export const showMessage = (message, callback) => {
             callback
         }
     })
+}
+export const RedirectUser = () => {
+    if (getCartItems().length) {
+        document.location.hash = '/shipping'
+    } else {
+        document.location.hash = '/'
+    }
 }

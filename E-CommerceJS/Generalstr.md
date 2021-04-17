@@ -58,3 +58,11 @@ b-
 complete sign in screen
 c-
 pop up message for invalid user (alert component)and over lay loading(progress indicator)
+15/4/2021
+create profile screen
+
+16/4/2021
+a-
+create check-out wezard
+b-
+create placeOrder screen UI

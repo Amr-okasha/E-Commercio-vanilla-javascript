@@ -36,3 +36,43 @@ export const setUserInfo = ({
         isAdmin,
     }))
 }
+
+export const clearUser = () => {
+    localStorage.removeItem("userInfo")
+}
+
+export const getShipping = () => {
+    const shipping = localStorage.getItem('shipping') ? JSON.parse(localStorage.getItem("shipping")) :
+        {
+            address: '',
+            city: '',
+            postalCode: '',
+            country: ''
+        }
+    return shipping
+}
+export const setShipping = ({
+    address = '',
+    city = '',
+    postalCode = '',
+    country = '',
+}) => {
+    localStorage.setItem('shipping', JSON.stringify({ address, city, postalCode, country })
+    )
+
+}
+
+export const getPayment = () => {
+    const payment = localStorage.getItem('payment') ? JSON.parse(localStorage.getItem("payment")) :
+        {
+            Paymentmethod: "paypal"
+        }
+    return payment
+}
+export const setPayment = ({
+    Paymentmethod = "paypal"
+}) => {
+    localStorage.setItem('payment', JSON.stringify({ Paymentmethod })
+    )
+
+}

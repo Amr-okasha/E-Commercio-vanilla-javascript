@@ -2,7 +2,7 @@ import express from 'express'
 import User from '../models/userModels';
 import expressAsyncHandler from 'express-async-handler';
 //  wrong syntax import expressAsyncHandler from "expressAsyncHandler"
-import { generateToken } from '../utils';
+import { generateToken, isAuth } from '../utils';
 
 const userRouter = express.Router()
 userRouter.get('/createadmin', expressAsyncHandler(async (req, res) => {
@@ -90,6 +90,60 @@ userRouter.post("/signin", expressAsyncHandler(async (req, res) => {
 })
 );
 
+
+//dublicate userRouter for sign in and change it to register
+userRouter.post("/register", expressAsyncHandler(async (req, res) => {
+
+    const user = new User({
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
+    })
+    const CreatedUser = user.save()
+    if (!CreatedUser) {
+        res.status(404).send({
+            message: "Invalid User Data"
+        })
+    } else {
+        res.send({
+            _id: CreatedUser._id,
+            name: CreatedUser.name,
+            email: CreatedUser.email,
+            isAdmin: CreatedUser.isAdmin,
+
+            token: generateToken(CreatedUser)
+        })
+    }
+})
+);
+
+
+userRouter.put("/:id", isAuth, expressAsyncHandler(async (req, res) => {
+    //in put method we will get user from data base
+    const user = await User.findById(req.params.id)
+
+    if (!user) {
+        res.status(404).send({
+            message: "User NOT Found"
+        })
+    } else {
+        // req.body.name get the name from request
+        //user.name or get it from data base
+        user.name = req.body.name || user.name
+        user.eamail = req.body.eamail || user.eamail
+        user.password = req.body.password || user.password
+        const updateUser = await user.save()
+        res.send({
+            _id: updateUser._id,
+            name: updateUser.name,
+            email: updateUser.email,
+            isAdmin: updateUser.isAdmin,
+
+            token: generateToken(updateUser)
+        })
+    }
+})
+);
 
 export default userRouter;
 
