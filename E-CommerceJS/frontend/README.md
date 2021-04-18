@@ -284,4 +284,12 @@ create check-out wezard
 b-
 create placeOrder screen UI
 1.create placeOrder.js
+2.create convertToOrder()that have the data that we will show in the page and send it to in http request
 2.style elements
+17/4/2021
+implement placeOrder actoin
+1-create after_render when click button create http request and send data to the backend
+2-create bakend OrderModl.js OrderRouter.js
+3-inside OrderModel.js create schema and save model and send it
+4-inside OrderRouter.js create route and make a post for that model
+5-in server.js create model in a route

@@ -76,3 +76,6 @@ export const setPayment = ({
     )
 
 }
+export const cleanCart = () => {
+    localStorage.removeItem("cartItem")
+}

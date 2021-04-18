@@ -3,11 +3,12 @@
 
 // (module.exports  =) this deleted after babel install becouse the babel deal with node and ES6
 
+//instead of id 1 we should create id that work with mongoose 24 letters after create order router
 export default {
     products: [
 
         {
-            id: "1",
+            id: "111111111111111111111111",
             name1: "Classic Bed Sofa",
             category: "furniture",
             image: "../furnitureImages/product-1.jpg",
@@ -24,7 +25,7 @@ export default {
             Fabric ...`,
         },
         {
-            id: "2",
+            id: "222222222222222222222222",
             name1: "Classic L-Shape Sofa",
             category: "furniture",
             image: "../furnitureImages/product-2.jpg",
@@ -39,7 +40,7 @@ export default {
             Cotton layers.‎ Fabric type: Zero.‎ ‎External 230 * 150 bed `,
         },
         {
-            id: "3",
+            id: "333333333333333333333333",
             name1: "Costa Sofa",
             category: "furniture",
             image: "../furnitureImages/product-3.jpg",
@@ -57,7 +58,7 @@ export default {
             Color:Multi Color`,
         },
         {
-            id: "4",
+            id: "444444444444444444444444",
             name1: "L shape Fixed Sofa",
             category: "furniture",
             image: "../furnitureImages/product-4.jpg",
@@ -73,7 +74,7 @@ export default {
             External ..`,
         },
         {
-            id: "5",
+            id: "555555555555555555555555",
             name1: "Sofa-Bed",
             category: "double-bed",
             image: "../furnitureImages/product-5.jpg",
@@ -91,7 +92,7 @@ export default {
             Color:Black Grey`,
         },
         {
-            id: "6",
+            id: "666666666666666666666666",
             name1: "Zegana sofa",
             category: "furniture",
             image: "../furnitureImages/product-6.jpg",

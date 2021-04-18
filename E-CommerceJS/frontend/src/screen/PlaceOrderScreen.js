@@ -1,5 +1,7 @@
+import { createOrder } from "../api";
 import CheckoutSteps from "../components/CheckoutSteps"
-import { getCartItems, getPayment, getShipping } from "../localSorage"
+import { getCartItems, getPayment, getShipping, cleanCart } from "../localSorage"
+import { hideLoading, showLoading, showMessage } from '../utils.js';
 
 const ConvertCartToOrder = () => {
     const orderItems = getCartItems()
@@ -34,6 +36,19 @@ const ConvertCartToOrder = () => {
 const PlaceOrderScreen = {
 
     after_render: () => {
+        const placeOrder = document.getElementById("place-order-button")
+        placeOrder.addEventListener("click", async () => {
+            const order = ConvertCartToOrder();
+            showLoading()
+            const data = await createOrder(order)
+            hideLoading()
+            if (data.error) {
+                showMessage(data.error)
+            } else {
+                cleanCart()
+                document.location.hash = `/order/${data.order._id}`
+            }
+        })
 
     },
     render: () => {
@@ -125,7 +140,7 @@ const PlaceOrderScreen = {
                         <div class=total>Order Total</div><div>${totalPrice}</div>
                     </li>
                     <li>
-                    <button class="primary fw">Place Order</button>
+                    <button id=place-order-button class="primary fw">Place Order</button>
                     </li>
                 </ul>
                </div>  

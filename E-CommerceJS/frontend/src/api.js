@@ -108,3 +108,28 @@ export const update = async ({ name, email, password }) => {
     }
 
 }
+
+export const createOrder = async (order) => {
+    console.log(order, "order*******************")
+    try {
+        const { token } = getUserInfo()
+        const response = await axios({
+            url: `${apiUrl}/api/orders`,
+            method: "POST",
+            headers: {
+                "Content-Type": "application/JSON",
+                "Authorization": `Bearer ${token}`
+            },
+            data: order
+
+        })
+
+        if (response.statusText !== "OK") {
+            throw new Error(response.data.message)
+
+        }
+        return response.data
+    } catch (err) {
+        return { error: err.response ? err.resopons.data.message : err.message }
+    }
+}

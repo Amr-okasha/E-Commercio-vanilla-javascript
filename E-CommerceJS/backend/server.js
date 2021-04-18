@@ -10,6 +10,7 @@ import mongoose from "mongoose"
 import config from "./config.js"
 import userRouter from "./userRouter/userRoute.js"
 import bodyParser from "body-parser"
+import orderRouter from "./userRouter/orderRouter.js"
 
 
 
@@ -33,6 +34,7 @@ app.use(cors())//this  also for cors but we make it after app bcouse app is cons
 app.use(bodyParser.json())
 
 app.use('/api/users', userRouter)
+app.use("/api/orders", orderRouter)
 // app.use(express.json());
 //get is http request -to do the new route -put the link and the second parameter1
 app.get('/api/products', (req, res) => {

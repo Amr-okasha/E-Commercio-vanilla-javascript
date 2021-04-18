@@ -33,10 +33,8 @@ const addToCart = (items, forceUpdate = false) => {
 const removeFromCart = (id) => {
     setCartItems(getCartItems().filter(x => x.product !== id))
     if (id === parsrRequestURL().id) {
-        console.log(parsrRequestURL().id, "parsrRequestURL().id")
         document.location.hash = "/cart"
     } else {
-        console.log(parsrRequestURL().id, "parsrRequestURL().id")
         rerender(CartScreen)
     }
 }
